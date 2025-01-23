@@ -4,6 +4,8 @@ venv/
 # ignore _pychache_ files
 __pycache__/
 
+#ignore .env files
+.env
 
 # dependencies
 front-end/node_modules
