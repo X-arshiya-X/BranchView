@@ -1,4 +1,4 @@
-import models.base_bst as BaseBST
+from models.base_bst import BaseBST
 
 class Node:
     def __init__(self, key):
@@ -8,7 +8,7 @@ class Node:
         self.parent = None
         self.height = 1  # New node is initially at height 1
 
-class AVLTree(BaseBST):
+class AvlBST(BaseBST):
     def __init__(self):
         self.root = None
 

@@ -1,6 +1,6 @@
 from models.standard_bst import StandardBST
 from models.avl_bst import AvlBST
-from models.red_black_bst import RedBlackTree
+from models.red_black_bst import RedBlackBST
 
 class BSTFactory:
     """
@@ -28,7 +28,7 @@ class BSTFactory:
         bst_types = {
             "standard": StandardBST,
             "balanced": AvlBST,
-            "red_black": RedBlackTree,
+            "red_black": RedBlackBST,
         }
 
         # Retrieve the class for the given tree_type or raise an exception if unsupported

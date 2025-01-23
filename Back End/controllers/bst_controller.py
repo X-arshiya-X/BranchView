@@ -1,9 +1,9 @@
 from flask import Blueprint, request, jsonify
 from services.bst_factory import BSTFactory
 from services.bst_visualizer import BSTVisualizer
-from services.tree_operations import in_order_traversal
-from models.red_black_bst import RedBlackTree
-from models.avl_bst import AVLTree
+from services.tree_operations import TreeOperations
+from models.red_black_bst import RedBlackBST
+from models.avl_bst import AvlBST
 from models.standard_bst import StandardBST
 import json
 
@@ -50,8 +50,9 @@ def get_in_order():
     for node in nodes:
         tree.insert(node)
 
-    # Get the in-order traversal
-    in_order_result = in_order_traversal(tree.root)
+    # Instantiate TreeOperations and get in-order traversal
+    tree_operations = TreeOperations()
+    in_order_result = tree_operations.inorder_traversal(tree)
 
     # Return the result
     return jsonify({"in_order": in_order_result})
