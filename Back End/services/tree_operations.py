@@ -34,7 +34,8 @@ class TreeOperations:
     def _inorder_helper(self, node) -> list:
         if node is None:
             return []
-        return self._inorder_helper(node.left) + [node.value] + self._inorder_helper(node.right)
+        # Ensure the correct attribute ('key' or 'value') is used based on the implementation
+        return self._inorder_helper(node.left) + [node.key] + self._inorder_helper(node.right)
 
     def search(self, bst: BaseBST, value: int) -> bool:
         """

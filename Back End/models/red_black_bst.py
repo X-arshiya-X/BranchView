@@ -1,4 +1,4 @@
-import models.base_bst as BaseBST
+from models.base_bst import BaseBST
 
 class Node:
     def __init__(self, key):
@@ -8,7 +8,7 @@ class Node:
         self.right = None
         self.parent = None
 
-class RedBlackTree(BaseBST):
+class RedBlackBST(BaseBST):
     def __init__(self):
         self.TNULL = Node(0)
         self.TNULL.color = "BLACK"  # Sentinel node, color black

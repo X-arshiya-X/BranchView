@@ -1,4 +1,4 @@
-import models.base_bst as BaseBST
+from models.base_bst import BaseBST
 
 class StandardBST(BaseBST):
     class Node:
